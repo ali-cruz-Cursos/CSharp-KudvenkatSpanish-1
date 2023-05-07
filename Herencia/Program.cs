@@ -48,7 +48,29 @@ namespace Herencia
             // Primero se crea la clase base y posteriormente la clase derivada
             // Primero se llama al constructor de la clase Base y Despues a la clase derivada.
             ClaseDerivada claseDerivada = new ClaseDerivada();
-            
+
+
+            // ****************************************************************************************//
+            // Ocultamiento de métodos Video 22
+            EmpleadoTiempoCompleto empleadoTiempoCompleto2 = new EmpleadoTiempoCompleto();
+            empleadoTiempoCompleto2.Nombre = "Homero";
+            empleadoTiempoCompleto2.Apellido = "Simpson";
+            empleadoTiempoCompleto2.ImprimirNombreCompleto();
+
+            EmpleadoTiempoParcial empleadoTiempoParcial2 = new EmpleadoTiempoParcial();
+            empleadoTiempoParcial2.Nombre = "Ned";
+            empleadoTiempoParcial2.Apellido = "Flanders";
+            empleadoTiempoParcial2.ImprimirNombreCompleto();
+            // Llamamos al método oculto. Cast Operator
+            ((Empleado)empleadoTiempoParcial2).ImprimirNombreCompleto();
+
+            // Otra forma de llamar al método oculto de la clase base (ImprimirNombreCompleto)
+            Empleado empParcial = new EmpleadoTiempoParcial();
+            empParcial.Nombre = "Empleado Parcial 1 Usando el método de clase base";
+            empParcial.Apellido = "apellido1";
+            empParcial.ImprimirNombreCompleto();
+
+
 
             Console.ReadLine();
 

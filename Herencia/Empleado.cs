@@ -15,7 +15,7 @@ namespace Herencia
 
         public void ImprimirNombreCompleto()
         {
-            Console.WriteLine($"Nombre Completo: {Nombre} {Apellido}");
+            Console.WriteLine($"Nombre Completo: {Nombre} - {Apellido}");
 
         }
     }
